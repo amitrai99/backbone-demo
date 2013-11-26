@@ -57,3 +57,4 @@ For generating HTML use a templating library like Mustache or Handlebars.
 ##Misc
 
 * [Refer the backbone documentation](http://backbonejs.org/docs/backbone.html#section-116)
+* Backbone JS is a MV* framework
