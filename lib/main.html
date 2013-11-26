@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>   
+<html>
+  <head>
+      <title>Backbone.js Template</title>
+  </head>
+  <body>
+
+    <div id="productView"></div>
+    
+    <!-- Product -->
+    <script id="view-template" type="text/x-handlebars-template">
+      <h2>{{name}}</h2>
+      <div>
+        <p>You are trying to purchase the following product</p>
+        <!-- By using the dot notation -->
+        <p class="price">Price : {{currency}} {{price}}</p>
+        <p class="disc">Discount : {{currency}} {{discount}}</p>
+        <p class="shipping">Shipping : {{currency}} {{shipping}}</p>
+      </div>
+    </script>
+    
+
+    <script src="script/thirdparty/require.js"></script>
+    <script src="script/main.js"></script>
+
+  </body>
+</html>

@@ -53,3 +53,7 @@ For generating HTML use a templating library like Mustache or Handlebars.
 
 * Event module is used to bind and trigger custom named events. 
 * It is an independent module that can be mixed with other objects, giving them the capability to bind and trigger custom events.
+
+##Misc
+
+* [Refer the backbone documentation](http://backbonejs.org/docs/backbone.html#section-116)

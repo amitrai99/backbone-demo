@@ -1,0 +1,10 @@
+<hr/>
+<p>compiled template</p>
+<h2>{{name}}</h2>
+<div>
+  <p>You are trying to purchase the following product</p>
+  <!-- By using the dot notation -->
+  <p class="price">Price : {{currency}} {{price}}</p>
+  <p class="disc">Discount : {{currency}} {{discount}}</p>
+  <p class="shipping">Shipping : {{currency}} {{shipping}}</p>
+</div>
