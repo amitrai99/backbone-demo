@@ -9,13 +9,40 @@
     
     <!-- Product -->
     <script id="view-template" type="text/x-handlebars-template">
-      <h2>{{name}}</h2>
-      <div>
+      <div class="productView" id="productView_{{ID}}">
+        <hr/>
+        <h2>{{name}}</h2>
         <p>You are trying to purchase the following product</p>
         <!-- By using the dot notation -->
         <p class="price">Price : {{currency}} {{price}}</p>
         <p class="disc">Discount : {{currency}} {{discount}}</p>
         <p class="shipping">Shipping : {{currency}} {{shipping}}</p>
+        
+        <form name="product" id="pform{{ID}}" action="#">
+          <input type="hidden" value="{{ID}}"/>
+          <fieldset>
+            <label id="colorLbl_{{ID}}" for="color_{{ID}}">Color</label>
+            <select name="colorSel" id="color_{{ID}}">
+            {{#each color}}
+              <option value="{{this}}">{{this}}</option>
+            {{/each}}
+            </select>
+            
+            <ul>
+            {{#each color}}
+              <li value="{{this}}" style="width:110px;height:20px;background:{{this}};color:red;">{{this}}</li>
+            {{/each}}
+            </ul>
+
+            <label id="sizeLbl_{{ID}}" for="size_{{ID}}">Size</label>
+            <select name="sizeSel" id="size_{{ID}}">
+            {{#each size}}
+              <option value="{{this}}">{{this}}</option>
+            {{/each}}
+            </select>
+
+          </fieldset>
+        </form>
       </div>
     </script>
     
