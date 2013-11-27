@@ -28,11 +28,7 @@
             {{/each}}
             </select>
             
-            <ul>
-            {{#each color}}
-              <li value="{{this}}" style="width:110px;height:20px;background:{{this}};color:red;">{{this}}</li>
-            {{/each}}
-            </ul>
+            <div class="color" style="border:2px solid #000; width:100px; height:50px; background: {{color.[0]}}">{{color.[0]}}</div>
 
             <label id="sizeLbl_{{ID}}" for="size_{{ID}}">Size</label>
             <select name="sizeSel" id="size_{{ID}}">
