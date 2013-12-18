@@ -26,6 +26,22 @@ Backbone JS demo/training.
 * Notify change via the `change` event.
 * `Backbone.Model` is the base class. Extend this to create your custom Model.
 
+>The `attributes` property is the internal hash containing the model's state — usually (but not necessarily) a form of the JSON object representing the model data on the server. It's often a straightforward serialization of a row from the database, but it could also be client-side computed state.
+
+>Please use `set` to update the `attributes` instead of modifying them directly. If you'd like to retrieve and munge a copy of the model's attributes, use `_.clone(model.attributes)` instead.
+
+
+```js
+  //create model
+  var pm = new model({
+    "productID": '123'
+  });
+  console.log(pm); //entire model object
+  console.log(pm.toJSON());// only returns the `attributes` data that is added via `set` or `defaults`
+  console.log(pm.get('name'));// only returns the `attributes` data that is added via `set` or `defaults`
+  console.log(pm.url);// only for prototype data, obviously
+```
+
 ### [Backbone View](http://backbonejs.org/#View)
 
 * View will render the UI using data from model.
